@@ -5,7 +5,7 @@ import { Header } from '@/components/Header';
 export function Groups() {
   return (
     <View style={styles.container}>
-      <Header/>
+      <Header />
       <Text style={styles.title}>Bem vindo ao seu app!</Text>
     </View>
   );

@@ -5,10 +5,14 @@ export const styles = StyleSheet.create({
         width: '100%',
         flexDirection: 'row',
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
+    },
+    button: {
+        flex: 1,
     },
     logo: {
         width: 46,
         height: 55
-    }
+    },
+
 });
