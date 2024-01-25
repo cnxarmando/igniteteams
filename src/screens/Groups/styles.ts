@@ -10,9 +10,7 @@ export const styles = StyleSheet.create({
       // justifyContent: 'center',
       padding: 24
     },
-    title: {
-      color: Theme.COLORS.GRAY_100,
-    }
+  
   });
 
 
