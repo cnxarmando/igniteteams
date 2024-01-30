@@ -1,8 +1,6 @@
 import { Theme } from '@/theme';
 import { StyleSheet, Dimensions } from 'react-native';
 
-const windowWidth = Dimensions.get('window').width;
-
 export const styles = StyleSheet.create({
     container: {
         minWidth: '100%',
@@ -32,4 +30,3 @@ export const styles = StyleSheet.create({
     
 })
 
-console.log(windowWidth)
