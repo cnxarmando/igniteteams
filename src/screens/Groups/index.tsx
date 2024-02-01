@@ -5,6 +5,7 @@ import { Header } from '@/components/Header';
 import { HighLight } from '@/components/HighLight';
 import { GroupCard } from '@/components/GroupCard';
 import { ListEmpty } from '@/components/ListEmpty';
+import { Button } from '@/components/Button';
 
 export function Groups() {
   const [groups, setGroups] = useState<string[]>([])
@@ -32,6 +33,10 @@ export function Groups() {
           message="Crie uam turma para adicionar pessoas"
         />
       }
+      />
+      <Button
+      title='Criar nova turma'
+      type='PRIMARY'
       />
     </View>
   );
