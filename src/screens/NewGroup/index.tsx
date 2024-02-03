@@ -7,6 +7,7 @@ import { styles } from './styles';
 import { Header } from '@/components/Header';
 import { HighLight } from '@/components/HighLight';
 import { Button } from '@/components/Button';
+import { Input } from '@/components/Input';
 
 export function NewGroup() {
     return (
@@ -19,7 +20,11 @@ export function NewGroup() {
                         subTitle='Crie a turma para adicionar participantes'
                     />           
             </View>
-            
+
+            <Input
+            message="Nova Turma"
+                
+            />            
             <Button
                 title='Criar nova turma'
             />

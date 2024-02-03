@@ -10,7 +10,8 @@ export const styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
 
-        backgroundColor: Theme.COLORS.GREEN_700
+        backgroundColor: Theme.COLORS.GREEN_700,
+        marginTop: 20
     },
     secondaryContainer: {
         minWidth: '100%',
