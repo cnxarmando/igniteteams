@@ -13,6 +13,8 @@ export function Input({message, ...rest}:Props){
           style={styles.container}
           placeholder={message}
           placeholderTextColor={Theme.COLORS.GRAY_300}
+          autoCorrect={false}
+          {...rest}
           >         
         </TextInput>
     )

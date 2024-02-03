@@ -10,5 +10,17 @@ export const styles = StyleSheet.create({
     content: {
         flex: 1,
         alignItems: 'center',
-    }
+    }, 
+    form: {
+        width: "100%",
+        backgroundColor: Theme.COLORS.GRAY_700,
+
+        flexDirection: 'row',
+
+        marginBottom: 20,
+        justifyContent: 'center',
+
+        borderRadius: 6,
+
+    },
 });

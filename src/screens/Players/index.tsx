@@ -8,6 +8,7 @@ import { Header } from '@/components/Header';
 import { HighLight } from '@/components/HighLight';
 import { Button } from '@/components/Button';
 import { Input } from '@/components/Input';
+import { ButtonIcon } from '@/components/ButtonIcon';
 
 export function Players() {
     return (
@@ -18,10 +19,18 @@ export function Players() {
                     title='Igreja Viva'
                     subTitle='Times que cumprem o ide'
                 />
-                <Input
-                    message="Nome do participante"
-                />
             </View>
+            <View style={styles.form}>
+                <Input
+                    message="Nome do pessoa"
+                />
+                <ButtonIcon
+                    nameIcon='add'
+                    type='SECONDARY'
+                />
+
+            </View>
+
 
 
             <Button
