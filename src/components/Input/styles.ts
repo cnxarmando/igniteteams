@@ -7,6 +7,7 @@ export const styles = StyleSheet.create({
 
         minHeight: 56,
         maxHeight: 56,
+        width: '100%',
 
         backgroundColor: Theme.COLORS.GRAY_700,
         color: Theme.COLORS.WHITE,
