@@ -9,6 +9,7 @@ import { HighLight } from '@/components/HighLight';
 import { Button } from '@/components/Button';
 import { Input } from '@/components/Input';
 import { ButtonIcon } from '@/components/ButtonIcon';
+import { Filter } from '@/components/Filter';
 
 export function Players() {
     return (
@@ -31,7 +32,10 @@ export function Players() {
 
             </View>
 
-
+            <Filter
+            title='Time A'
+            
+            />
 
             <Button
                 title='Remover nova turma'
