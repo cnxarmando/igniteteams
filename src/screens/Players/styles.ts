@@ -8,7 +8,7 @@ export const styles = StyleSheet.create({
         padding: 24
     },
     content: {
-        flex: 1,
+        flex: 0,
         alignItems: 'center',
     }, 
     form: {
@@ -19,8 +19,20 @@ export const styles = StyleSheet.create({
 
         marginBottom: 20,
         justifyContent: 'center',
-
+        
         borderRadius: 6,
-
     },
+    headerList: {
+        width: "100%",
+        flexDirection: 'row',
+        alignItems: 'center',
+
+        marginTop: 32,
+        marginEnd: 12,
+    },
+    numberOfPlayers: {
+        color: Theme.COLORS.GRAY_200,
+        fontFamily: Theme.FONT_FAMILY.BOLD,
+        fontSize: Theme.FONT_SIZE.SM,
+    }
 });

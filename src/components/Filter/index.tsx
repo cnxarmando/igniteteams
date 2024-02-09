@@ -13,7 +13,7 @@ export function Filter({ title, ...rest }: FilterStyleProps) {
     const [buttonClicked, setButtonClicked] = useState(false);
 
     const handlePress = () => {
-        setButtonClicked(!buttonClicked);
+        setButtonClicked(!buttonClicked);  
     };
 
     return (

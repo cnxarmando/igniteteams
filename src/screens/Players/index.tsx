@@ -1,7 +1,4 @@
-import { View } from 'react-native';
-import { Theme } from '@/theme';
-
-import { UsersThree } from 'phosphor-react-native';
+import { View, FlatList, Text } from 'react-native';
 
 import { styles } from './styles';
 import { Header } from '@/components/Header';
@@ -10,8 +7,11 @@ import { Button } from '@/components/Button';
 import { Input } from '@/components/Input';
 import { ButtonIcon } from '@/components/ButtonIcon';
 import { Filter } from '@/components/Filter';
+import { useState } from 'react';
 
 export function Players() {
+    const [ Players, setPlayers ] = useState([])
+
     return (
         <View style={styles.container}>
             <Header showBackButton />
@@ -29,19 +29,25 @@ export function Players() {
                     nameIcon='add'
                     type='SECONDARY'
                 />
-
             </View>
+            <View style={styles.headerList}>
+                <FlatList
+                    data={['Time A', 'Time B', 'Time C', 'Time D', 'Time E', 'Time F']}
+                    keyExtractor={item => item}
+                    renderItem={
+                        ({ item }) => (
+                            <Filter
+                                title={item}
 
-            <Filter
-            title='Time A'
-            
-            />
-
-            <Button
-                title='Remover nova turma'
-                type='SECONDARY'
-            />
-
+                            />
+                        )
+                    }
+                    horizontal
+                />
+                <Text style={styles.numberOfPlayers}>
+                    {Players.length}
+                </Text>
+            </View>
         </View>
     )
 }
