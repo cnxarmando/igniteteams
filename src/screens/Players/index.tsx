@@ -8,9 +8,11 @@ import { Input } from '@/components/Input';
 import { ButtonIcon } from '@/components/ButtonIcon';
 import { Filter } from '@/components/Filter';
 import { useState } from 'react';
+import { PlayerCard } from '@/components/PlayerCard';
+import { ListEmpty } from '@/components/ListEmpty';
 
 export function Players() {
-    const [ Players, setPlayers ] = useState([])
+    const [players, setPlayers] = useState(['Armando', 'Simon', 'Ana', 'Rodrigo', 'Mayk', 'Biro', 'Diego','Armando1', 'Simon1', 'Ana1', 'Rodrigo1', 'Mayk1', 'Biro1', 'Diego1'])
 
     return (
         <View style={styles.container}>
@@ -45,9 +47,32 @@ export function Players() {
                     horizontal
                 />
                 <Text style={styles.numberOfPlayers}>
-                    {Players.length}
+                    {players.length}
                 </Text>
             </View>
+            <FlatList
+                data={players}
+                keyExtractor={item => item}
+                renderItem={({ item }) => (
+                    <PlayerCard
+                        name={item}
+                        onRemove={() => {}}
+                        />
+                        )}
+                ListEmptyComponent={() =>(
+                    <ListEmpty
+                    message='Nao ha pessoas neste time'
+                    />
+                    )}
+                showsHorizontalScrollIndicator={false}
+                contentContainerStyle={[
+                    players.length === 0 ? { flex: 1 } : {paddingBottom: 100}
+                ]}
+            />
+                <Button
+                title='Remover turma'
+                type='SECONDARY'
+                />
         </View>
     )
 }
