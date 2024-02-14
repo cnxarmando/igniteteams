@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { Text, View, FlatList } from 'react-native';
+import { View, FlatList } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 import { styles } from './styles'
 import { Header } from '@/components/Header';
 import { HighLight } from '@/components/HighLight';
@@ -7,8 +8,15 @@ import { GroupCard } from '@/components/GroupCard';
 import { ListEmpty } from '@/components/ListEmpty';
 import { Button } from '@/components/Button';
 
-export function Groups() {
+export function Groups(props) {
   const [groups, setGroups] = useState<string[]>([])
+
+  const navigation = useNavigation();
+
+  function handleNewGroup() {
+    console.log('oi')
+    props.navigation.navigate('new')
+  }
 
   return (
     <View style={styles.container}>
@@ -37,6 +45,8 @@ export function Groups() {
       <Button
       title='Criar nova turma'
       type='PRIMARY'
+      onPress={handleNewGroup}
+      
       />
     </View>
   );

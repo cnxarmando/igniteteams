@@ -6,13 +6,16 @@ export type ButtonTypeStyleProps = 'PRIMARY' | 'SECONDARY';
 type Props = {
     title: string
     type?: ButtonTypeStyleProps
+    onPress?: () => void;
 }
 
-export function Button(props: Props) {
+export function Button( props: Props) {
     const { type = 'PRIMARY', title } = props;
     
     return (
-        <TouchableOpacity style={type === 'PRIMARY' ? styles.primaryContainer : styles.secondaryContainer}>
+        <TouchableOpacity style={type === 'PRIMARY' ? styles.primaryContainer : styles.secondaryContainer}
+        onPress={props.onPress}
+        >
             
                 <Text style={styles.text}>
                     {title}
