@@ -8,6 +8,8 @@ import { GroupCard } from '@/components/GroupCard';
 import { ListEmpty } from '@/components/ListEmpty';
 import { Button } from '@/components/Button';
 
+import { SafeAreaView } from 'react-native-safe-area-context';
+
 export function Groups(props) {
   const [groups, setGroups] = useState<string[]>([])
 
@@ -19,7 +21,7 @@ export function Groups(props) {
   }
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <Header />
       <HighLight
         title='Turmas'
@@ -48,6 +50,6 @@ export function Groups(props) {
       onPress={handleNewGroup}
       
       />
-    </View>
+    </SafeAreaView>
   );
 }

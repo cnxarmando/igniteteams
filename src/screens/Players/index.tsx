@@ -10,12 +10,13 @@ import { Filter } from '@/components/Filter';
 import { useState } from 'react';
 import { PlayerCard } from '@/components/PlayerCard';
 import { ListEmpty } from '@/components/ListEmpty';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 export function Players() {
     const [players, setPlayers] = useState(['Armando', 'Simon', 'Ana', 'Rodrigo', 'Mayk', 'Biro', 'Diego','Armando1', 'Simon1', 'Ana1', 'Rodrigo1', 'Mayk1', 'Biro1', 'Diego1'])
 
     return (
-        <View style={styles.container}>
+        <SafeAreaView style={styles.container}>
             <Header showBackButton />
             <View style={styles.content}>
                 <HighLight
@@ -73,6 +74,6 @@ export function Players() {
                 title='Remover turma'
                 type='SECONDARY'
                 />
-        </View>
+        </SafeAreaView>
     )
 }

@@ -9,6 +9,7 @@ import { HighLight } from '@/components/HighLight';
 import { Button } from '@/components/Button';
 import { Input } from '@/components/Input';
 import { useNavigation } from '@react-navigation/native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 export function NewGroup() {
     const navigattion = useNavigation();
@@ -17,7 +18,7 @@ export function NewGroup() {
         navigattion.navigate('players')
     }
     return (
-        <View style={styles.container}>
+        <SafeAreaView style={styles.container}>
             <Header showBackButton />
             <View style={styles.content}>                
                     <UsersThree  size={52} color={Theme.COLORS.GREEN_500}/>   
@@ -36,6 +37,6 @@ export function NewGroup() {
                 onPress={handleNew}
             />
 
-        </View>
+        </SafeAreaView>
     )
 }
