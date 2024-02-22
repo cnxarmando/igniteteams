@@ -8,8 +8,14 @@ import { Header } from '@/components/Header';
 import { HighLight } from '@/components/HighLight';
 import { Button } from '@/components/Button';
 import { Input } from '@/components/Input';
+import { useNavigation } from '@react-navigation/native';
 
 export function NewGroup() {
+    const navigattion = useNavigation();
+
+    function handleNew() {
+        navigattion.navigate('players')
+    }
     return (
         <View style={styles.container}>
             <Header showBackButton />
@@ -27,6 +33,7 @@ export function NewGroup() {
             />            
             <Button
                 title='Criar nova turma'
+                onPress={handleNew}
             />
 
         </View>
