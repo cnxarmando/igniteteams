@@ -4,6 +4,7 @@ import { Theme } from '@/theme';
 
 type Props = {
   message: string
+  onChangeText?: (value: string) => void
 };
 
 

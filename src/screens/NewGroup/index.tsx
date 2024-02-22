@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import { View} from 'react-native';
 import { Theme } from '@/theme';
 
@@ -12,10 +14,12 @@ import { useNavigation } from '@react-navigation/native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 export function NewGroup() {
+    const [ group, setGroup ] = useState('');
+
     const navigattion = useNavigation();
 
     function handleNew() {
-        navigattion.navigate('players')
+        navigattion.navigate('players', { group })
     }
     return (
         <SafeAreaView style={styles.container}>
@@ -30,8 +34,9 @@ export function NewGroup() {
 
             <Input
             message="Nova Turma"
-                
+            onChangeText={setGroup}                
             />            
+
             <Button
                 title='Criar nova turma'
                 onPress={handleNew}

@@ -11,16 +11,25 @@ import { useState } from 'react';
 import { PlayerCard } from '@/components/PlayerCard';
 import { ListEmpty } from '@/components/ListEmpty';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { useRoute } from '@react-navigation/native';
+
+
+type RouteParams = {
+    group: string
+}
 
 export function Players() {
     const [players, setPlayers] = useState(['Armando', 'Simon', 'Ana', 'Rodrigo', 'Mayk', 'Biro', 'Diego','Armando1', 'Simon1', 'Ana1', 'Rodrigo1', 'Mayk1', 'Biro1', 'Diego1'])
+
+    const route = useRoute()
+    const { group } = route.params as RouteParams;
 
     return (
         <SafeAreaView style={styles.container}>
             <Header showBackButton />
             <View style={styles.content}>
                 <HighLight
-                    title='Igreja Viva'
+                    title={group}
                     subTitle='Times que cumprem o ide'
                 />
             </View>
